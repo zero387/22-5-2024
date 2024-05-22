@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <!-- 
+        OOP viết tắt của object oriented programming lập trình hướng đối tượng
+        là một mô hình lập trình  quy về các đối tượng
+        các đối tượng gồm có các thuộc tính và phương thức 
+        ví dụ đối tượng con mèo có thuộc tính là mầu mắt mầu lông cân nặng ...
+                phương thức là chạy, bay, chạy bay...
+        bằng việc tổ chức code giúp cde gọn gàng hơn mạch lạc hơn
+
+        4 tính chất 
+            tính đóng gói encapsulation
+            tính kế thừa inheritance
+            tính đa hình polymorphism
+            tính trừu tượng abstraction
+        cách khởi tạo đối tượng 
+
+
+            class Person{
+
+                name:string;
+
+                contructor(name:string){
+                    this.name = name;
+                }
+                //nơi khai báo các phương thức cho lớp person
+                sayHello(){
+                    console.log("Hello " + this.name);
+                }
+            }
+
+            //khởi tạo đối tượng từ lớp person
+            let person1 = new Person("Huy");
+            person1.sayHello()
+
+        access modifiers phạm vi truy cập nó thể hiện bởi tính bao đóng hay đóng gói encapsulation
+            pucblic : truy cập từ bất cứ đâu
+            private : truy cập từ trong lớp và các lớp con của lớp đó
+            protected : truy cập từ trong lớp và các lớp con của lớp đó
+            default : truy cập từ trong lớp và các lớp con của lớp đó và truy cập từ bất cứ đâu trong project nếu không khai báo phạm vi truy cập    
+
+
+            public : truy cập từ bất cứ đâu
+                ví dụ 
+                class Person{
+                public name:string;
+            private : truy cập từ trong lớp đó
+            bên ngoài không truy cập được muốn truy cập được phải thông qua get,set
+                ví dụ
+                class Person{
+                    private name:string;
+                }
+                class Student extends Person{
+                    sayHello(){
+                        console.log("Hello " + this.name);
+                    }
+                }
+                let person1 = new Person("Huy");
+                person1.sayHello()
+                let student1 = new Student("Huy");
+                student1.sayHello()
+            }
+            protected : truy cập từ trong lớp và các lớp con của lớp đó
+            
+                ví dụ
+                class Person{
+                    protected name:string;
+                }
+                class Student extends Person{
+                    sayHello(){
+                        console.log("Hello " + this.name);
+                    }
+                }
+                let person1 = new Person("Huy");
+                person1.sayHello()
+                let student1 = new Student("Huy");
+                student1.sayHello()
+            }
+            default : truy cập từ trong lớp và các lớp con của lớp đó và truy cập từ bất cứ đâu trong project nếu không khai báo phạm vi truy cập
+                ví dụ
+                class Person{
+                    name:string;
+                }
+                class Student extends Person{
+                    sayHello(){
+                        console.log("Hello " + this.name);
+                    }
+                }
+                let person1 = new Person("Huy");
+                person1.sayHello()
+                let student1 = new Student("Huy");
+                student1.sayHello()
+            }
+     -->
+</body>
+</html>
